@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container-div">
+        <div class="burs-sonuc">
+            <h5>Burs sonucunu sorgulamak için telefon numaranızı başında sıfır olmadan giriniz.</h5>
+            <div>
+                <input type="text" placeholder="Örnek: 555XXXXXXX" id="myInput">
+            </div>
+            <div class="sorgula" type="button" onclick="getInputValue();"><h5 class="sorgula-yazi">Sorgula</h5></div>         
+        </div>
+
+    </div>
+
+    <style>
+        .container-div{
+            display: flex;
+            justify-content: center;
+        }
+        input{
+            height: 30px;
+            width: 150px;
+            border: solid 2px;
+            border-color: #155774;
+            border-radius: 3px;
+            background-color: #E8F0FE;
+            margin-bottom: 10px;
+        }
+        ::placeholder { 
+            color: #155774;
+            opacity: 1; 
+        }
+        .sorgula{
+            border: solid 2px;
+            border-color: #155774;
+            background-color: #155774;
+            border-radius: 3px;
+            width: 100px;
+        }
+        .sorgula-yazi{
+            color: #E8F0FE;
+            margin: 5px;
+        }
+    </style>
+
+    <script>
+
+        var numbers = ["123456", "654321", "789456","654987"]
+        function getInputValue(){
+            
+            var inputVal = document.getElementById("myInput").value;
+            
+            if (numbers.includes(inputVal)==true){
+                alert("Değerli bursiyerimiz, burs almaya hak kazandınız.");
+            }
+            else{
+                alert("Değerli öğrencimiz, burs almaya hak kazanamadınız.");
+            }
+            
+        }
+
+    </script>
+</body>
+</html>
